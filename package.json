@@ -1,0 +1,13 @@
+{
+  "name": "nodebb-plugin-imdb",
+  "version": "0.0.1",
+  "nbbpm": {
+        "compatibility": "^0.6.0"
+  },
+  "description": "NodeBB IMDb embed with OMDb API",
+  "main": "library.js",
+  "author": {
+    "name": "Joshua Rickers",
+    "email": "josh.rickers@googlemail.com"
+  }
+}

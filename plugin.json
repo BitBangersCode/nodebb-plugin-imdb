@@ -1,0 +1,14 @@
+{
+	"id": "nodebb-plugin-imdb",
+	"name": "NodeBB IMDb Embed",
+	"description": "NodeBB Plugin that allows users to embed IMDB data",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "filter:parse.post", "method": "parse", "callbacked": true }	],
+	"staticDirs": {
+		"public": "./public"
+	},
+	"scripts": [
+		"public/js/main.js"
+	]
+}
