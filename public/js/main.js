@@ -1,31 +1,39 @@
 (function(window) {
 
-	var imdburls
-	var regex = new RegExp('(?:https?:\/\/)?(?:www\.)?(?:imdb\.com)\/(?:title)\/(.+)\/', 'g');
 	var urls;
+	var href;
 	var omdburl;
+	var target;
+	var regex = new RegExp('(?:https?:\/\/)?(?:www\.)?(?:imdb\.com)\/(?:title)\/(.+)\/', 'g');
 
 	function createOMDB(id){
-		var omdburl = 'http://www.omdbapi.com/?i=' + id + '&plot=short&r=json';
-		return omdburl;
+		var url = 'http://www.omdbapi.com/?i=' + id + '&plot=short&r=json';
+		return url;
 	}
 
 	function getFilmInfo(url){
 		var filmData;
 		$.get(url, function(data){
-			filmData = JSON.parse(data);
-			console.log(filmData.Title);
+			showPopover(JSON.parse(data), target);
 		});
 	}
 
-	$(document).ready(function() {
+	function showPopover(filmData, target){
+		target.popover({ 
+			trigger: 'hover', 
+			placement: 'right',
+			title: filmData.Title 
+		}).popover('show');
+	}
 
-		urls = document.links;
-		for (var i = 0; i < urls.length; i++) {
-			while ((imdburls = regex.exec(urls[i].href)) != null) {
-				omdburl = createOMDB(imdburls[1]);
+	$(document).ready(function() {
+		$(document).on('mouseover', 'a', function(e){
+			target = $(e.currentTarget);
+			href = $(this).attr('href');
+			while((urls = regex.exec(href)) !== null) {
+				omdburl = createOMDB(urls[1]);
 				getFilmInfo(omdburl);
 			}
-		}
+		});
 	});
 })(window);

@@ -4,7 +4,7 @@
   "nbbpm": {
         "compatibility": "^0.6.0"
   },
-  "description": "NodeBB IMDb embed with OMDb API",
+  "description": "NodeBB IMDB embed with OMDb API",
   "main": "library.js",
   "author": {
     "name": "Joshua Rickers",
