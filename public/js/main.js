@@ -23,7 +23,7 @@
 			trigger: 'manual',
 			placement: 'right',
 			html: true,
-			title: filmData.Title,
+			title: '<b>' + filmData.Title + '</b>',
 			content: '<h5>Rating: '+ filmData.imdbRating +'</h5><h5>Genre: ' + filmData.Genre + '</h5><p>' + filmData.Plot + '</p>'
 		}).popover('show');
 	}
