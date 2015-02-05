@@ -3,8 +3,7 @@
 	"name": "NodeBB IMDB Embed",
 	"description": "NodeBB Plugin that allows users to embed IMDB data",
 	"library": "./library.js",
-	"hooks": [
-		{ "hook": "filter:parse.post", "method": "parse", "callbacked": true }	],
+	"hooks": [],
 	"staticDirs": {
 		"public": "./public"
 	},
