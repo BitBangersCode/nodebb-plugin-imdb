@@ -8,7 +8,7 @@
 	var regex = new RegExp('(?:https?:\/\/)?(?:www\.)?(?:imdb\.com)\/(?:title)\/(.+)\/', 'g');
 
 	function createOMDB(id){
-		var url = 'http://www.omdbapi.com/?i=' + id + '&plot=short&r=json';
+		var url = 'https://www.omdbapi.com/?i=' + id + '&plot=short&r=json';
 		return url;
 	}
 
