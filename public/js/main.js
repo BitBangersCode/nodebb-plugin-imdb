@@ -15,7 +15,7 @@
 	function getFilmInfo(url, callback){
 		$.get(url, function(data){
 			//showPopover(JSON.parse(data), target);
-			callback(JSON.parse(data), target);
+			callback(data, target);
 		});
 	}
 
