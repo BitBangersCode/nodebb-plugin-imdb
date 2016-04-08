@@ -21,6 +21,7 @@
 
 	function showPopover(filmData, target){
 		target.popover({
+			container: 'body',
 			trigger: 'hover',
 			placement: 'right',
 			html: true,
@@ -45,17 +46,5 @@
 			clearTimeout(setTimeoutConst);
 			target.popover('destroy');
 		});
-	//	$(document).on('mouseenter', 'a', function(e){
-	//		target = $(e.currentTarget);
-	//		href = $(this).attr('href');
-	//		while((urls = regex.exec(href)) !== null) {
-	//			omdburl = createOMDB(urls[1]);
-	//			getFilmInfo(omdburl, function(filmData, target){
-	//				showPopover(filmData, target);
-	//			});
-	//		}
-	//	}).on('mouseleave', 'a', function(){
-	//		
-	//	});
 	});
 })(window);
