@@ -1,7 +1,7 @@
 {
 	"id": "nodebb-plugin-imdb",
-	"name": "NodeBB IMDB Embed",
-	"description": "NodeBB Plugin that allows users to embed IMDB data",
+	"name": "NodeBB IMDB Cards",
+	"description": "NodeBB Plugin that adds hover cards to IMDB links",
 	"library": "./library.js",
 	"hooks": [],
 	"staticDirs": {
